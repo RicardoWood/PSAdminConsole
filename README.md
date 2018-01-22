@@ -1,2 +1,2 @@
 # PSAdminConsole
-PSAdmin Console - Remote Control of your Application
+PeopleSoft Admin Console - Remote Control of your Application
