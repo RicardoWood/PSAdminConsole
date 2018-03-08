@@ -9,6 +9,5 @@ Installation: If you grab all the files and folders in the src and run the PSAdm
   
 There's a bit more info on my blog https://mrcmonkey.blogspot.co.uk/2018/03/psadmin-console.html
 
-`Thanks`  
-`Rich`
+`Thanks, Rich`
 
