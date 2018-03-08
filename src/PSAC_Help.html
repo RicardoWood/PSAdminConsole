@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>PS Admin Console Help</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
+<body>
+<div class="w3-container">
+
+<h2>PeopleSoft Admin Console</h2>
+<p>Click on the headings below to view topics:</p>
+  
+<button onclick="myFunction('part1')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">Hello!</button>
+<div id="part1" class="w3-container w3-hide">
+  <h4>Welcome to the PeopleSoft Admin Console.</h4>
+  <p>This application gives you a central view of PeopleSoft application servers and the application servers, process schedulers and web servers</p>
+  <p>You'll be able to take actions against the services that are available: start up, shut down and interrogate the status</p>
+</div>
+
+<button onclick="myFunction('part2')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">Creating a new server list</button>
+<div id="part2" class="w3-container w3-hide">
+  <p>To initially import a list of servers in to the console you will need to create a flat file that has all the servers listed on seperate rows</p>
+  <div class="w3-panel w3-card w3-light-grey">
+    <h3>Example</h3>
+    <div class="w3-code notranslate">
+      vmpshcmdev02<br>
+      vmpsihdev01<br>
+      vmpsfscmdev02<br>
+    </div>
+  </div>  
+  <p>Save this as a .txt file in a place where you'll remember :)
+</div>
+
+<button onclick="myFunction('part3')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">Initially loading server list</button>
+<div id="part3" class="w3-container w3-hide">
+  <p>From the menu select File > New, then choose the .txt file that contains the list of servers you wish to interrogate.</p>
+  <p>The application will then go have a poke around on those servers and see what PeopleSoft applications you have on there. If it finds anything it will display the details in the console</p>
+  <p>This might take some time as it will try to determine the status of the services that it finds: running, stopped, completely banjaxxed, etc.</p>
+</div>
+
+<button onclick="myFunction('part4')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">Saving server list</button>
+<div id="part4" class="w3-container w3-hide">
+  <p>Once you have a list that you would like to look at again (without having to wait for ages as it finds the services on them) you can use the File > Save As... option to save the list in XML format for future use</p>
+</div>
+
+<button onclick="myFunction('part5')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">Loading an existing server list</button>
+<div id="part5" class="w3-container w3-hide">
+  <p>So you have a XML file that you've saved already eh? Well use the File > Open... menu item and get that loaded!</p>
+  <p>Once it's loaded the application will re-scan the services to see what their current state is</p>
+</div>
+
+<button onclick="myFunction('part6')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">&quot;And Action!&quot;</button>
+<div id="part6" class="w3-container w3-hide">
+  <p>Now you have a list of servers and services they are providing you can use the actions available to look at what they are doing and actually tell them what to do!</p>
+  <p>Select one or more server/service from your list, select an action from the drop down list and hit the Go... button. If the action is relevant to the service then the application will try it's very best to do it!</p>
+  <p>You can also right click on the row to do more server specific actions like viewing (and killing off) the processes running, opening the Computer Management console and connecting to the server via RDP</p>
+</div>
+
+<button onclick="myFunction('part7')" class="w3-button w3-block w3-blue w3-border w3-border-gray w3-left-align">What's new...</button>
+<div id="part7" class="w3-container w3-hide">
+  <h3>V 1.0</h3>
+  <p>24/11/2017</p>
+  <p>Not a lot really...this is the first version after all!</p>
+  <h3>V 1.1</h3>
+  <p>05/01/2018</p>
+  <p>Internal changes to speed up the app and prcs service status</p>
+</div>
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+
+</html>
